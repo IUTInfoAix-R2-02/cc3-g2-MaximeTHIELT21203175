@@ -11,6 +11,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
@@ -31,6 +32,32 @@ public class ToileController implements Initializable {
     private static int angleDepart = 90;
     private static int noteMaximale = 20;
 
+    @FXML
+    TextField tf1;
+    @FXML
+    TextField tf2;
+    @FXML
+    TextField tf3;
+    @FXML
+    TextField tf4;
+    @FXML
+    TextField tf5;
+    @FXML
+    TextField tf6;
+    @FXML
+    Button b1;
+    @FXML
+    Button b2;
+
+    @FXML
+    public void b2Clicked(){
+        tf1.setText("");
+        tf2.setText("");
+        tf3.setText("");
+        tf4.setText("");
+        tf5.setText("");
+        tf6.setText("");
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

@@ -13,6 +13,7 @@
 
 
 <HBox id="scene" prefHeight="420.0" prefWidth="650.0" spacing="20.0" stylesheets="@style.css"
+      fx:controller="fr.amu.iut.cc3.ToileController"
       xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
       style="-fx-background-color: #7ba0db;">
     <Pane prefHeight="400.0" prefWidth="400.0" >
@@ -33,6 +34,8 @@
         <Text x="170" y="410" text="Compétence 4" />
         <Text x="26" y="300" text="Compétence 5" />
         <Text x="26" y="99" text="Compétence 6" />
+        <Circle centerX="200.0" centerY="200.0" radius="10.0" styleClass="toile"
+                style="-fx-background-color: #000000;"/>
         <Pane fx:id="toile" styleClass="toile"/>
     </Pane>
     <GridPane alignment="CENTER" prefHeight="400.0" prefWidth="250.0">
@@ -75,7 +78,7 @@
         <Button fx:id="b1" text="Tracer"
                GridPane.columnIndex="0"
                GridPane.rowIndex="6"/>
-        <Button fx:id="b2" text="Vider"
+        <Button fx:id="b2" onAction="#b2Clicked" text="Vider"
                 GridPane.columnIndex="1"
                 GridPane.rowIndex="6"/>
     </GridPane>

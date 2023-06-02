@@ -59,15 +59,26 @@ public class ToileController implements Initializable {
         tf6.setText("");
     }
 
+    @FXML
+    public void b1Clicked(){
+        tf1.getText();
+        tf2.getText();
+        tf3.getText();
+        tf4.getText();
+        tf5.getText();
+        tf6.getText();
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
     }
 
+    @FXML
     int getXRadarChart(double value, int axe ){
         return (int) (rayonCercleExterieur + Math.cos(Math.toRadians(angleDepart - (axe-1)  * angleEnDegre)) * rayonCercleExterieur
                 *  (value / noteMaximale));
     }
-
+    @FXML
     int getYRadarChart(double value, int axe ){
         return (int) (rayonCercleExterieur - Math.sin(Math.toRadians(angleDepart - (axe-1)  * angleEnDegre)) * rayonCercleExterieur
                 *  (value / noteMaximale));
